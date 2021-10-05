@@ -3,7 +3,9 @@ const btn = document.getElementById("bg_button"); // for the button
 const color = document.getElementById("bg_info"); // to show the color info
 btn.addEventListener('click',function () {
     let cl = "#";
-    cl = cl + (hex[Math.floor(Math.random()*hex.length)]) + (hex[Math.floor(Math.random()*hex.length)]) + (hex[Math.floor(Math.random()*hex.length)]) + (hex[Math.floor(Math.random()*hex.length)]) + (hex[Math.floor(Math.random()*hex.length)]) + (hex[Math.floor(Math.random()*hex.length)]);
+    for(let i = 0; i < 6; i++) 
+        cl = cl + (hex[Math.floor(Math.random() * hex.length)]);
+    
     document.body.style.backgroundColor = cl;
     color.innerHTML = cl;
 })
